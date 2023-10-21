@@ -18,7 +18,8 @@
 
 # ----------------------------------------------
 #  BPS -> BleuRaven Python Script
-#  xavierloux.com
+#  BleuRaven.fr
+#  XavierLoux.com
 # ----------------------------------------------
 
 
@@ -104,14 +105,14 @@ class ProgressionBarClass():
         sys.stdout.flush()
 
 
-def print_separation(number=60):
+def print_separation(number=60, char="-"):
     """
     Prints a separation line consisting of '#' characters.
 
     Args:
         number (int, optional): The number of '#' characters in the line. Defaults to 60.
     """
-    print("# {0} #".format("-" * number))
+    print("# {0} #".format(char * number))
 
 
 def print_title(text, number=60):
