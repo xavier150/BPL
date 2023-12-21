@@ -20,6 +20,14 @@ bps.color\_set module
    :undoc-members:
    :show-inheritance:
 
+bps.console\_utils module
+-------------------------
+
+.. automodule:: bps.console_utils
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
 bps.math module
 ---------------
 

@@ -11,7 +11,7 @@ import sys
 
 sys.path.insert(0, os.path.abspath(".."))
 
-project = 'BleuRaven Python Library documentation'
+project = 'BleuRaven Python Library'
 copyright = '2023, BleuRaven'
 author = 'BleuRaven'
 release = '1.0.0'

@@ -1,9 +1,9 @@
-.. BleuRaven Python Library documentation documentation master file, created by
-   sphinx-quickstart on Wed Dec 20 21:55:18 2023.
+.. BleuRaven Python Library Documentation documentation master file, created by
+   sphinx-quickstart on Thu Dec 21 21:44:19 2023.
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Welcome to BleuRaven Python Library documentation's documentation!
+BleuRaven Python Library API Documentation
 ==================================================================
 
 .. toctree::
