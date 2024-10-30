@@ -1,0 +1,7 @@
+sphinx-apidoc -o docs .
+
+Cette commande génère des fichiers de documentation dans le répertoire docs pour les modules Python présents dans le répertoire courant.
+
+.\docs\make.bat html   
+
+Cette commande génère la documentation au format HTML à partir des fichiers source créés par la commande précédente.
