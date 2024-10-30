@@ -1,7 +1,5 @@
 # BleuRaven Python Library
-This is my personal Python Library for Blender use.  (The wiki is not finished.)  
-BPS -> BleuRaven Python Script
-
+BPL (BleuRaven Python Script) is my personal Python Library.
 You free to use it, you can also credit me or support my works.
 
 Discord:
