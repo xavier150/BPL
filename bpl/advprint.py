@@ -28,20 +28,20 @@ import time
 
 class ProgressionBarClass():
 
-    def _get_name(self):
+    def _get_name(self) -> str:
         return self.__name
 
-    def _set_name(self, value):
+    def _set_name(self, value: str) -> None:
         if not isinstance(value, str):
             raise TypeError("name must be set to a String")
         self.__name = value
 
     name = property(_get_name, _set_name)
 
-    def _get_length(self):
+    def _get_length(self) -> int:
         return self.__length
 
-    def _set_length(self, value):
+    def _set_length(self, value: int) -> None:
         if not isinstance(value, int):
             raise TypeError("length must be set to an Integer")
         self.__length = value
@@ -50,10 +50,10 @@ class ProgressionBarClass():
 
     previous_step = 0.0
 
-    def _get_total_step(self):
+    def _get_total_step(self) -> float:
         return self.__total_step
 
-    def _set_total_step(self, value):
+    def _set_total_step(self, value: float) -> None:
         if not (isinstance(value, int) or isinstance(value, float)):
             raise TypeError("total_step must be set to an Integer or Float")
         self.__total_step = value
@@ -72,7 +72,7 @@ class ProgressionBarClass():
         self.__total_step = 1.0  # from 0 to 1
         self.__counter_start = time.perf_counter()
 
-    def update_progress(self, progress):
+    def update_progress(self, progress: float) -> None:
         job_title = self.__name
         length = self.__length
         total_step = self.__total_step
@@ -98,9 +98,15 @@ class ProgressionBarClass():
         # Print the progress message on the same line
         print(msg, end='', flush=True)
 
-def print_formatted_text(text, width=60, fill_char="=", 
-                         left_border="# ", left_padding=" ", 
-                         right_padding=" ", right_border=" #"):
+def print_formatted_text(
+    text: str, 
+    width: int = 60, 
+    fill_char: str = "=", 
+    left_border: str = "# ", 
+    left_padding: str = " ", 
+    right_padding: str = " ", 
+    right_border: str = " #"
+) -> None:
     """
     Prints formatted text with customizable padding and border characters.
 
@@ -138,7 +144,11 @@ def print_separator(width=60, fill_char="-"):
         right_border=" #"
     )
 
-def print_big_title(text, width=60, border_char="#"):
+def print_big_title(
+    text: str, 
+    width: int = 60, 
+    border_char: str = "#"
+) -> None:
     """
     Prints a big title enclosed by a border.
 
@@ -157,7 +167,12 @@ def print_big_title(text, width=60, border_char="#"):
     )
     print(border_char * width)
 
-def print_simple_title(text, width=60, fill_char="=", border_char="#"):
+def print_simple_title(
+    text: str, 
+    width: int = 60, 
+    fill_char: str = "=", 
+    border_char: str = "#"
+) -> None:
     """
     Prints a simple title with side borders.
 
