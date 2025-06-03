@@ -26,15 +26,15 @@
 from typing import List, Tuple
 
 def get_mirror_arrays() -> Tuple[List[str], List[str]]:
-    def add_mirror(source_suffixes, mirror_suffixes, source, mirror):
+    def add_mirror(source_suffixes: List[str], mirror_suffixes: List[str], source: str, mirror: str):
         source_suffixes.append(source)
         mirror_suffixes.append(mirror)
         source_suffixes.append(mirror)
         mirror_suffixes.append(source)
 
 
-    source_suffixes = []
-    mirror_suffixes = []
+    source_suffixes: List[str] = []
+    mirror_suffixes: List[str] = []
     
     add_mirror(source_suffixes, mirror_suffixes, "_L", "_R")
     add_mirror(source_suffixes, mirror_suffixes, "_l", "_r")
@@ -66,3 +66,4 @@ def get_laterality_suffix(string: str) -> str:
     for suffix in all_suffixes:
         if string.endswith(suffix):
             return suffix
+    return ""

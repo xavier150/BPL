@@ -27,24 +27,19 @@ import time
 
 
 class ProgressionBarClass():
-
     def _get_name(self) -> str:
         return self.__name
 
     def _set_name(self, value: str) -> None:
-        if not isinstance(value, str):
-            raise TypeError("name must be set to a String")
         self.__name = value
 
     name = property(_get_name, _set_name)
 
-    def _get_length(self) -> int:
+    def _get_length(self) -> float:
         return self.__length
 
-    def _set_length(self, value: int) -> None:
-        if not isinstance(value, int):
-            raise TypeError("length must be set to an Integer")
-        self.__length = value
+    def _set_length(self, value: float) -> None:
+         self.__length = value
 
     length = property(_get_length, _set_length)
 
@@ -54,8 +49,6 @@ class ProgressionBarClass():
         return self.__total_step
 
     def _set_total_step(self, value: float) -> None:
-        if not (isinstance(value, int) or isinstance(value, float)):
-            raise TypeError("total_step must be set to an Integer or Float")
         self.__total_step = value
 
     total_step = property(_get_total_step, _set_total_step)
@@ -85,7 +78,7 @@ class ProgressionBarClass():
 
         if self.show_block:
             block = int(round(length * progress / total_step))
-            msg += " [{0}]".format("#" * block + "-" * (length - block))
+            msg += " [{0}]".format("#" * block + "-" * int(length - block))
 
         if self.show_steps:
             msg += " {0}/{1}".format(progress, total_step)
@@ -126,7 +119,7 @@ def print_formatted_text(
     
     print(f"{left_border}{fill_char * padding}{left_padding}{text}{right_padding}{fill_char * padding}{right_border}")
 
-def print_separator(width=60, fill_char="-"):
+def print_separator(width: int = 60, fill_char: str = "-"):
     """
     Prints a separator line with customizable characters.
 

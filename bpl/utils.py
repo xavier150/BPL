@@ -94,7 +94,7 @@ def get_formatted_time(
     minutes, seconds = divmod(remainder, 60)
 
     if compact:
-        parts = []
+        parts: list[str] = []
         if hours:
             parts.append(f"{hours}h")
         if minutes:
